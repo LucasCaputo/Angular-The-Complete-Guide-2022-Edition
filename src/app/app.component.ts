@@ -7,9 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  userName = ''
+  display = false;
 
-  onClick() {
-    this.userName = ''
+  logs = []
+
+  onToggle($event: PointerEvent ) {
+    this.display = !this.display
+    
+    this.logs.push($event.timeStamp)
+    
   }
 }
